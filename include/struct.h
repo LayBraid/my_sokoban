@@ -12,6 +12,7 @@ typedef struct sokoban_struct {
     char *buffer;
     int length;
     int lines;
+    char **map;
 } sokoban_t;
 
 #endif
