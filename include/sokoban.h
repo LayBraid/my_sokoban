@@ -8,6 +8,8 @@
 #ifndef MY_SOKOBAN_SOKOBAN_H
     #define MY_SOKOBAN_SOKOBAN_H
 
+    #include "struct.h"
+
 int my_sokoban(char *path);
 
 #endif
