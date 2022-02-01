@@ -10,6 +10,7 @@
 #include "sokoban.h"
 #include "my.h"
 #include "utils.h"
+#include "map.h"
 
 int my_sokoban(char *path)
 {
@@ -17,5 +18,7 @@ int my_sokoban(char *path)
     skb->buffer = get_in_buffer(path);
     skb->length = max_length_line(skb->buffer);
     skb->lines = max_line(skb->buffer);
+
+    init_map(skb);
     return (0);
 }
