@@ -18,6 +18,7 @@ int my_sokoban(char *path)
     skb->buffer = get_in_buffer(path);
     skb->length = max_length_line(skb->buffer);
     skb->lines = max_line(skb->buffer);
+    skb->pos = malloc(sizeof(pos_t));
 
     init_map(skb);
     return (0);
