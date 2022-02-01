@@ -42,3 +42,13 @@ int max_length_line(const char *buffer)
     }
     return max;
 }
+
+int max_line(const char *buffer)
+{
+    int count = 1;
+
+    for (int i = 0; buffer[i] != '\0'; i++)
+        if (buffer[i] == '\n')
+            count++;
+    return count;
+}

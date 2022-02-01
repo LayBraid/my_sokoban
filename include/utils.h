@@ -12,4 +12,6 @@ char *get_in_buffer(char *path);
 
 int max_length_line(const char *buffer);
 
+int max_line(const char *buffer);
+
 #endif
