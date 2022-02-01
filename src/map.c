@@ -22,6 +22,10 @@ void init_map(sokoban_t *skb)
             pos[0] = -1;
             continue;
         }
+        if (skb->buffer[i] == 'P') {
+            skb->pos->x = pos[0];
+            skb->pos->y = pos[1];
+        }
         skb->map[pos[1]][pos[0]] = skb->buffer[i];
     }
     skb->map[pos[1]][pos[0]] = '\0';
