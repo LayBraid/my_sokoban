@@ -10,4 +10,6 @@
 
     #include "struct.h"
 
+void check_victory(sokoban_t *skb);
+
 #endif
