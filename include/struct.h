@@ -14,6 +14,7 @@ typedef struct position_struct {
 } pos_t;
 
 typedef struct sokoban_struct {
+    char *path;
     char *buffer;
     int length;
     int lines;
