@@ -5,9 +5,8 @@
 ** No file there , just an epitech header example
 */
 
-#include <ncurses.h>
-#include "game.h"
-#include "my.h"
+#include "../include/game.h"
+#include "../include/controls.h"
 
 void update_map(char **map, int lines)
 {
@@ -23,15 +22,16 @@ void update_map(char **map, int lines)
 
 void input_manager(sokoban_t *skb, int input)
 {
-    if (input == 10)
-        skb->status = 1;
+    for (int i = 0; i < NB_CONTROLS - 1; i++)
+        if (input == skb->controls[i]->input)
+            skb->controls[i]->function(skb);
 }
 
 void launch_game(sokoban_t *skb)
 {
     initscr();
     keypad(stdscr, TRUE);
-    while (skb->status == 0) {
+    while (skb->status == -1) {
         update_map(skb->map, skb->lines);
         input_manager(skb, getch());
     }
