@@ -9,6 +9,7 @@
     #define MY_SOKOBAN_CONTROLS_H
 
     #include "struct.h"
+    #include <curses.h>
 
     #define NB_CONTROLS 6
     #define SPACE 32

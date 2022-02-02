@@ -7,7 +7,6 @@
 
 #include "controls.h"
 #include "my.h"
-#include <curses.h>
 
 control_t *setup_control(int input, void (* function)(sokoban_t *skb))
 {
