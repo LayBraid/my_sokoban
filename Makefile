@@ -20,7 +20,7 @@ CFLAGS += -Wextra -Iinclude -g3
 
 $(NAME): $(OBJ)
 	cd lib/my && make
-	gcc $(OBJ) $(SRC_LIB) -o./$(NAME) -g3
+	gcc $(OBJ) $(SRC_LIB) -o./$(NAME) -g3 -lncurses
 
 all: $(NAME)
 
