@@ -21,6 +21,12 @@ typedef struct sokoban_struct {
     char **map;
     pos_t *pos;
     int status;
+    struct control_struct **controls;
 } sokoban_t;
+
+typedef struct control_struct {
+    int input;
+    void (* function)(sokoban_t *skb);
+} control_t;
 
 #endif
