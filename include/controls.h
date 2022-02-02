@@ -21,4 +21,12 @@ void quit_game(sokoban_t *skb);
 
 void reset_map(sokoban_t *skb);
 
+void up_movement(sokoban_t *skb);
+
+void down_movement(sokoban_t *skb);
+
+void left_movement(sokoban_t *skb);
+
+void right_movement(sokoban_t *skb);
+
 #endif
