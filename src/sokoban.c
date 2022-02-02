@@ -14,6 +14,7 @@
 int my_sokoban(char *path)
 {
     sokoban_t *skb = malloc(sizeof(sokoban_t));
+    skb->path = path;
     skb->buffer = get_in_buffer(path);
     skb->length = max_length_line(skb->buffer);
     skb->lines = max_line(skb->buffer);
