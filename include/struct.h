@@ -19,6 +19,7 @@ typedef struct sokoban_struct {
     int lines;
     char **map;
     pos_t *pos;
+    int status;
 } sokoban_t;
 
 #endif
