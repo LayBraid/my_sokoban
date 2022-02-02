@@ -22,7 +22,7 @@ void init_controls(sokoban_t *skb)
 {
     skb->controls = malloc(sizeof(control_t *) * NB_CONTROLS);
     skb->controls[0] = setup_control(ENTER, quit_game);
-    skb->controls[1] = setup_control(SPACE, quit_game);
+    skb->controls[1] = setup_control(SPACE, reset_map);
     skb->controls[2] = setup_control(KEY_UP, quit_game);
     skb->controls[3] = setup_control(KEY_DOWN, quit_game);
     skb->controls[4] = setup_control(KEY_LEFT, quit_game);

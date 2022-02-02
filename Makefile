@@ -13,7 +13,7 @@ SRC = src/sokoban.c \
 	  src/game.c \
 	  src/map.c \
 	  src/controls.c \
-	  src/exe_controls.c
+	  src/controls/simple_controls.c
 
 OBJ = $(MAIN:.c=.o) $(SRC:.c=.o)
 
@@ -35,6 +35,7 @@ fclean:
 
 clean:
 	rm -f src/*.o
+	rm -f src/controls/*.o
 	rm -rf *.gcda
 	rm -rf *.gcno
 	rm -rf *.c.gcov

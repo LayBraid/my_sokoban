@@ -6,8 +6,14 @@
 */
 
 #include "controls.h"
+#include "map.h"
 
 void quit_game(sokoban_t *skb)
 {
     skb->status = 1;
+}
+
+void reset_map(sokoban_t *skb)
+{
+    init_map(skb);
 }

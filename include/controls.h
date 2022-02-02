@@ -18,4 +18,6 @@ void init_controls(sokoban_t *skb);
 
 void quit_game(sokoban_t *skb);
 
+void reset_map(sokoban_t *skb);
+
 #endif
