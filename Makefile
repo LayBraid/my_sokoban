@@ -12,6 +12,8 @@ SRC = src/sokoban.c \
 	  src/utils.c \
 	  src/map.c \
 	  src/game.c \
+	  src/controls.c \
+	  src/exe_controls.c
 
 OBJ = $(MAIN:.c=.o) $(SRC:.c=.o)
 
