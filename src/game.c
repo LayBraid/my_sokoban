@@ -5,8 +5,8 @@
 ** No file there , just an epitech header example
 */
 
-#include "../include/game.h"
-#include "../include/controls.h"
+#include "game.h"
+#include "controls.h"
 
 void update_map(char **map, int lines)
 {
@@ -15,10 +15,6 @@ void update_map(char **map, int lines)
         mvprintw(i, 0, map[i]);
     refresh();
 }
-
-//TODO ENTER pour stop la game
-//TODO SPACE pour relaunch la map et recommencer au début
-//TODO déplacements
 
 void input_manager(sokoban_t *skb, int input)
 {

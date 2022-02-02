@@ -10,8 +10,8 @@ MAIN = src/main.c
 SRC = src/sokoban.c \
 	  src/check_file.c \
 	  src/utils.c \
-	  src/map.c \
 	  src/game.c \
+	  src/map.c \
 	  src/controls.c \
 	  src/exe_controls.c
 
