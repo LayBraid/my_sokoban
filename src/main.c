@@ -9,7 +9,6 @@
 #include "check_file.h"
 #include "sokoban.h"
 
-//TODO ENTER pour stop la game
 //TODO SPACE pour relaunch la map et recommencer au début
 //TODO déplacements
 
