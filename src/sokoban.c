@@ -10,6 +10,7 @@
 #include "utils.h"
 #include "map.h"
 #include "game.h"
+#include "controls.h"
 
 int my_sokoban(char *path)
 {
@@ -19,9 +20,10 @@ int my_sokoban(char *path)
     skb->length = max_length_line(skb->buffer);
     skb->lines = max_line(skb->buffer);
     skb->pos = malloc(sizeof(pos_t));
-    skb->status = 0;
+    skb->status = -1;
 
     init_map(skb);
+    init_controls(skb);
     launch_game(skb);
     return (0);
 }
