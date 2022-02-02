@@ -11,6 +11,12 @@
     #include "struct.h"
 
     #define NB_CONTROLS 6
+    #define UP 122
+    #define	DOWN 115
+    #define	LEFT 113
+    #define	RIGHT 100
+    #define SPACE 32
+    #define ENTER 10
 
 void init_controls(sokoban_t *skb);
 

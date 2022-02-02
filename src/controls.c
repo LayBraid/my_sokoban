@@ -20,5 +20,10 @@ control_t *setup_control(int input, void (* function)(sokoban_t *skb))
 void init_controls(sokoban_t *skb)
 {
     skb->controls = malloc(sizeof(control_t *) * NB_CONTROLS);
-    skb->controls[0] = setup_control(10, quit_game);
+    skb->controls[0] = setup_control(ENTER, quit_game);
+    skb->controls[1] = setup_control(SPACE, quit_game);
+    skb->controls[2] = setup_control(UP, quit_game);
+    skb->controls[3] = setup_control(DOWN, quit_game);
+    skb->controls[4] = setup_control(LEFT, quit_game);
+    skb->controls[5] = setup_control(RIGHT, quit_game);
 }
