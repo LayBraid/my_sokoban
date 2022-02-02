@@ -12,6 +12,7 @@ SRC = src/sokoban.c \
 	  src/utils.c \
 	  src/game.c \
 	  src/map.c \
+	  src/victory.c \
 	  src/controls.c \
 	  src/controls/simple_controls.c \
 	  src/controls/movement_controls.c
