@@ -19,6 +19,7 @@ typedef struct sokoban_struct {
     int length;
     int lines;
     char **map;
+    char **initial;
     pos_t *pos;
     int status;
     struct control_struct **controls;
