@@ -8,6 +8,7 @@
 #include "game.h"
 #include "controls.h"
 #include "victory.h"
+#include "fail.h"
 
 void update_map(char **map, int lines)
 {
@@ -34,6 +35,7 @@ void launch_game(sokoban_t *skb)
         update_map(skb->map, skb->lines);
         input_manager(skb, getch());
         check_victory(skb);
+        check_fail(skb);
     }
     endwin();
 }
