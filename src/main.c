@@ -26,7 +26,7 @@ int print_help(void)
 int main(int ac, char **av)
 {
     if (ac != 2)
-        return print_help();
+        return 84;
     if (!my_strcmp(av[1], "-h"))
         return print_help();
     if (sanity_check(av[1]) != 1)
