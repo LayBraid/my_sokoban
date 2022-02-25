@@ -32,7 +32,6 @@ int is_blocked(sokoban_t *skb, int x, int y)
     return 0;
 }
 
-
 void check_fail(sokoban_t *skb)
 {
     int box = nb_box(skb);

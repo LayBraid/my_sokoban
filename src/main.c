@@ -9,11 +9,8 @@
 #include "check_file.h"
 #include "sokoban.h"
 
-//TODO SPACE pour relaunch la map et recommencer au début
-//TODO déplacements
-
 int print_help(void)
-{//TODO Check sur le sujet
+{
     my_putstr("USAGE\n");
     my_putstr("\t   ./my_sokoban map\n\n");
     my_putstr("DESCRIPTION\n");
