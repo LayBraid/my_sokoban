@@ -17,11 +17,12 @@ char *get_in_buffer(char *path)
     char *buffer;
     struct stat buf;
 
-    stat(path, &buf);
+    if (stat(path, &buf) == -1)
+        return "error";
     buffer = malloc(sizeof(char) * (buf.st_size + 1));
     fd = open(path, O_RDONLY);
     if (fd == -1)
-        buffer = "error";
+        return "error";
     read(fd, buffer, buf.st_size);
     buffer[buf.st_size] = '\0';
     close(fd);
