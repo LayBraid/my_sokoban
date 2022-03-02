@@ -25,5 +25,7 @@ int my_sokoban(char *path)
     init_map(skb);
     init_controls(skb);
     launch_game(skb);
-    return (0);
+    if (skb->status == 2)
+        return 1;
+    return 0;
 }

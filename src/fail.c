@@ -36,10 +36,12 @@ void check_fail(sokoban_t *skb)
 {
     int box = nb_box(skb);
     int counter = 0;
+    if (skb->status == 1)
+        return;
 
     for (int i = 0; i < skb->lines; i++)
         for (int j = 0; j < skb->length; j++)
             counter += is_blocked(skb, i, j);
     if (counter == box)
-        skb->status = 0;
+        skb->status = 2;
 }

@@ -11,9 +11,10 @@
     #include "struct.h"
     #include <curses.h>
 
-    #define NB_CONTROLS 6
+    #define NB_CONTROLS 7
     #define SPACE 32
     #define ENTER 10
+    #define ESCAPE 27
 
 void init_controls(sokoban_t *skb);
 
