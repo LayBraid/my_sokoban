@@ -19,10 +19,7 @@ void up_movement(sokoban_t *skb)
 {
     if (skb->map[skb->pos->y - 1][skb->pos->x] == ' ' ||
         skb->map[skb->pos->y - 1][skb->pos->x] == 'O') {
-        if (skb->initial[skb->pos->y][skb->pos->x] == 'O')
-            skb->map[skb->pos->y][skb->pos->x] = 'O';
-        else
-            skb->map[skb->pos->y][skb->pos->x] = ' ';
+        reset_position(skb);
         skb->map[skb->pos->y - 1][skb->pos->x] = 'P';
         skb->pos->y--;
     }
@@ -40,10 +37,7 @@ void down_movement(sokoban_t *skb)
 {
     if (skb->map[skb->pos->y + 1][skb->pos->x] == ' ' ||
         skb->map[skb->pos->y + 1][skb->pos->x] == 'O') {
-        if (skb->initial[skb->pos->y][skb->pos->x] == 'O')
-            skb->map[skb->pos->y][skb->pos->x] = 'O';
-        else
-            skb->map[skb->pos->y][skb->pos->x] = ' ';
+        reset_position(skb);
         skb->map[skb->pos->y + 1][skb->pos->x] = 'P';
         skb->pos->y++;
     }
@@ -61,10 +55,7 @@ void left_movement(sokoban_t *skb)
 {
     if (skb->map[skb->pos->y][skb->pos->x - 1] == ' ' ||
         skb->map[skb->pos->y][skb->pos->x - 1] == 'O') {
-        if (skb->initial[skb->pos->y][skb->pos->x] == 'O')
-            skb->map[skb->pos->y][skb->pos->x] = 'O';
-        else
-            skb->map[skb->pos->y][skb->pos->x] = ' ';
+        reset_position(skb);
         skb->map[skb->pos->y][skb->pos->x - 1] = 'P';
         skb->pos->x--;
     }
@@ -82,10 +73,7 @@ void right_movement(sokoban_t *skb)
 {
     if (skb->map[skb->pos->y][skb->pos->x + 1] == ' ' ||
         skb->map[skb->pos->y][skb->pos->x + 1] == 'O') {
-        if (skb->initial[skb->pos->y][skb->pos->x] == 'O')
-            skb->map[skb->pos->y][skb->pos->x] = 'O';
-        else
-            skb->map[skb->pos->y][skb->pos->x] = ' ';
+        reset_position(skb);
         skb->map[skb->pos->y][skb->pos->x + 1] = 'P';
         skb->pos->x++;
     }
