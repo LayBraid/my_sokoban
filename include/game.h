@@ -10,6 +10,7 @@
 
     #include "struct.h"
     #include <ncurses.h>
+    #include <stdlib.h>
 
 void launch_game(sokoban_t *skb);
 

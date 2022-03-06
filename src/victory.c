@@ -6,6 +6,7 @@
 */
 
 #include "victory.h"
+#include "game.h"
 
 int search_on_initial(char **map, char **initial, int x, int y)
 {
@@ -21,6 +22,8 @@ void check_victory(sokoban_t *skb)
     for (int i = 0; i < skb->lines; i++)
         for (int j = 0; j < skb->length; j++)
             count += search_on_initial(skb->map, skb->initial, j, i);
-    if (count == 0)
-        skb->status = 1;
+    if (count == 0) {
+        endwin();
+        exit(0);
+    }
 }

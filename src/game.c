@@ -5,7 +5,6 @@
 ** No file there , just an epitech header example
 */
 
-#include <stdlib.h>
 #include "game.h"
 #include "controls.h"
 #include "victory.h"
@@ -31,6 +30,7 @@ void input_manager(sokoban_t *skb, int input)
 void launch_game(sokoban_t *skb)
 {
     initscr();
+    noecho();
     keypad(stdscr, TRUE);
     while (skb->status == -1) {
         update_map(skb->map, skb->lines);
