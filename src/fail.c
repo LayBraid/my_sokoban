@@ -43,8 +43,6 @@ void check_fail(sokoban_t *skb)
     for (int i = 0; i < skb->lines; i++)
         for (int j = 0; j < skb->length; j++)
             counter += is_blocked(skb, i, j);
-    if (counter == box) {
-        endwin();
-        exit(1);
-    }
+    if (counter == box)
+        skb->status = 2;
 }

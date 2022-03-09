@@ -38,5 +38,6 @@ void launch_game(sokoban_t *skb)
         check_victory(skb);
         check_fail(skb);
     }
+    update_map(skb->map, skb->lines);
     endwin();
 }
