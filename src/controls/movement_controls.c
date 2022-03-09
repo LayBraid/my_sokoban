@@ -22,6 +22,7 @@ void up_movement(sokoban_t *skb)
         reset_position(skb);
         skb->map[skb->pos->y - 1][skb->pos->x] = 'P';
         skb->pos->y--;
+        return;
     }
     if (skb->map[skb->pos->y - 1][skb->pos->x] == 'X' &&
         (skb->map[skb->pos->y - 2][skb->pos->x] == ' ' ||
@@ -30,6 +31,7 @@ void up_movement(sokoban_t *skb)
         skb->map[skb->pos->y - 1][skb->pos->x] = 'P';
         skb->map[skb->pos->y - 2][skb->pos->x] = 'X';
         skb->pos->y--;
+        return;
     }
 }
 
@@ -40,6 +42,7 @@ void down_movement(sokoban_t *skb)
         reset_position(skb);
         skb->map[skb->pos->y + 1][skb->pos->x] = 'P';
         skb->pos->y++;
+        return;
     }
     if (skb->map[skb->pos->y + 1][skb->pos->x] == 'X' &&
         (skb->map[skb->pos->y + 2][skb->pos->x] == ' ' ||
@@ -48,6 +51,7 @@ void down_movement(sokoban_t *skb)
         skb->map[skb->pos->y + 1][skb->pos->x] = 'P';
         skb->map[skb->pos->y + 2][skb->pos->x] = 'X';
         skb->pos->y++;
+        return;
     }
 }
 
@@ -58,6 +62,7 @@ void left_movement(sokoban_t *skb)
         reset_position(skb);
         skb->map[skb->pos->y][skb->pos->x - 1] = 'P';
         skb->pos->x--;
+        return;
     }
     if (skb->map[skb->pos->y][skb->pos->x - 1] == 'X' &&
         (skb->map[skb->pos->y][skb->pos->x - 2] == ' ' ||
@@ -66,6 +71,7 @@ void left_movement(sokoban_t *skb)
         skb->map[skb->pos->y][skb->pos->x - 1] = 'P';
         skb->map[skb->pos->y][skb->pos->x - 2] = 'X';
         skb->pos->x--;
+        return;
     }
 }
 
@@ -76,6 +82,7 @@ void right_movement(sokoban_t *skb)
         reset_position(skb);
         skb->map[skb->pos->y][skb->pos->x + 1] = 'P';
         skb->pos->x++;
+        return;
     }
     if (skb->map[skb->pos->y][skb->pos->x + 1] == 'X' &&
         (skb->map[skb->pos->y][skb->pos->x + 2] == ' ' ||
@@ -84,5 +91,6 @@ void right_movement(sokoban_t *skb)
         skb->map[skb->pos->y][skb->pos->x + 1] = 'P';
         skb->map[skb->pos->y][skb->pos->x + 2] = 'X';
         skb->pos->x++;
+        return;
     }
 }
