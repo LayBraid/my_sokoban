@@ -5,18 +5,7 @@
 ## No file there , just an epitech header example
 ##
 
-MAIN = src/main.c
-
-SRC = src/sokoban.c \
-	  src/check_file.c \
-	  src/utils.c \
-	  src/game.c \
-	  src/map.c \
-	  src/victory.c \
-	  src/fail.c \
-	  src/controls.c \
-	  src/controls/simple_controls.c \
-	  src/controls/movement_controls.c
+SRC = $(wildcard src/*.c)
 
 OBJ = $(MAIN:.c=.o) $(SRC:.c=.o)
 
@@ -28,14 +17,17 @@ $(NAME): $(OBJ)
 	cd lib/my && make
 	gcc $(OBJ) $(SRC_LIB) -o./$(NAME) -g3 -lncurses
 
+.PHONY: all
 all: $(NAME)
 
+.PHONY: fclean
 fclean:
 	cd lib/my && make fclean
 	make clean
 	rm -f $(NAME)
 	rm -f u
 
+.PHONY: clean
 clean:
 	rm -f src/*.o
 	rm -f src/controls/*.o
@@ -43,6 +35,7 @@ clean:
 	rm -rf *.gcno
 	rm -rf *.c.gcov
 
+.PHONY: re
 re:
 	make fclean
 	make
