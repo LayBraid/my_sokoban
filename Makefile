@@ -5,7 +5,8 @@
 ## No file there , just an epitech header example
 ##
 
-SRC = $(wildcard src/*.c)
+SRC = $(wildcard src/*.c) \
+	  $(wildcard src/controls/*.c) \
 
 OBJ = $(SRC:.c=.o)
 
