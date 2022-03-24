@@ -7,7 +7,7 @@
 
 SRC = $(wildcard src/*.c)
 
-OBJ = $(MAIN:.c=.o) $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 NAME = my_sokoban
 SRC_LIB = -Llib -lmy
